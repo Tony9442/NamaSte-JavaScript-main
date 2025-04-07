@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width: 50%;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.fun{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.click{
+    background-color: darkred;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
