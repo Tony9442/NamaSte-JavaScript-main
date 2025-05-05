@@ -6,13 +6,11 @@ const arr = [5, 1, 3, 2, 6];
 
 //Triple - [15, 3, 9, 6, 18]
 
-
-
 const output = arr.map((double) => {
-   return double * 2;
+  return double * 2;
 });
 
-console.group(output);
+console.log(output);
 
 const result = arr.map((triple) => {
   return triple * 3;
@@ -20,21 +18,18 @@ const result = arr.map((triple) => {
 
 console.group(result);
 
-
 //Convert the arr to Binary - ["101", "1", "11", "10", "110"]
 
 const answer = arr.map((binary) => {
-  return binary.toString(2);//forumal to convert number to binary
+  return binary.toString(2); //forumal to convert number to binary
 });
 
 console.group(answer);
-
 
 //We got the fristNames of our users[] who's age is less than 20
 // const ans8 = users.filter((x) => x.age < 20).map((x) => x.fristName);
 
 // console.log(ans8);
-
 
 //list out the full names
 //{}
@@ -47,12 +42,10 @@ const users = [
 ];
 
 const ans6 = users.map((user) => {
-    const fullName = user.fristName + " " + user.lastName;
-    return `${fullName}`;
-})
+  const fullName = user.fristName + " " + user.lastName;
+  return fullName;
+});
 console.log(ans6);
-
-
 
 //Filter()
 
@@ -66,7 +59,7 @@ const object = [10, 15, 20, 25, 30];
 
 const ans1 = object.filter((even) => {
   return even % 2 === 0; //forumal for finding even numbers
-})
+});
 
 console.log(ans1);
 
@@ -75,7 +68,6 @@ const ans2 = object.filter((odd) => {
 });
 
 console.log(ans2);
-
 
 const ans3 = object.filter((greater) => {
   return greater > 19; //
@@ -88,7 +80,13 @@ const ans8 = users.filter((x) => x.age < 20).map((x) => x.fristName);
 
 console.log(ans8);
 
-
+const ans10 = users.reduce((acc, curr) => {
+ if (curr.age < 20) {
+  acc.push(curr.fristName)
+ }
+ return acc;
+}, [])
+console.log(ans10);
 
 //Reduce()
 
@@ -98,55 +96,49 @@ const reduce = [20, 40, 50, 60];
 
 //retrun the age= { 29 : 2, 26 : 1, 23 : 1, 17 : 1};
 const ans7 = users.reduce((acc, curr) => {
-    if(acc[curr.age]) {
-        acc[curr.age] = ++acc[curr.age];
-    }else{
-        acc[curr.age] = 1;
-    }
-    return acc;
-}, {})
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
 
 console.log(ans7);
 
 //Find the sum of the number
 const ans4 = reduce.reduce((acc, curr) => {
-    acc = acc + curr;
-    return acc;
+  acc = acc + curr;
+  return acc;
 }, 0);
 
 console.log(ans4);
 
+// function sumNum (reduce){
+//     let sum = 0;
+//     for (let i = 0; i < reduce.length; i++){
+//         sum = sum + reduce[i]
+//     }
+//     return sum;
+// }
 
-function sumNum (reduce){
-    let sum = 0;
-    for (let i = 0; i < reduce.length; i++){
-        sum = sum + reduce[i]
-    }
-    return sum;
-}
-
-console.log(sumNum(reduce));
-
-
+// console.log(sumNum(reduce));
 
 //This code is correct
-function findSumNum () {
- const reduce = [20, 40, 50, 60];
+// function findSumNum () {
+//  const reduce = [20, 40, 50, 60];
 
- let sum = 0;
- for (let i = 0; i < reduce.length; i++) {
-    sum = sum + reduce[i];
- }
- return sum;
-}
-console.log(findSumNum());
-
-
+//  let sum = 0;
+//  for (let i = 0; i < reduce.length; i++) {
+//     sum = sum + reduce[i];
+//  }
+//  return sum;
+// }
+// console.log(findSumNum());
 
 //Find the Max of the number
 
 //The frist and second code is the same but it's wirtten in diffrent logic
-
 
 function sumMax(reduce) {
   let max = 0;
@@ -160,15 +152,20 @@ function sumMax(reduce) {
 
 console.log(sumMax(reduce));
 
-
 //reduce logic
 const ans5 = reduce.reduce((max, curr) => {
-    if(curr > max) {
-        max = curr;
-    }
-    return max;
+  if (curr > max) {
+    max = curr;
+  }
+  return max;
 }, 0);
 console.log(ans5);
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+function greaterThan5(num) {
+  return num > 5;
+}
 
+const ans9 = numbers.filter(greaterThan5);
+console.log(ans9);

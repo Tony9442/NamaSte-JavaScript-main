@@ -42,6 +42,7 @@ const calculate = function (radius, logic) {
   }
   return output;
 }
+
 console.log(calculate(radius, area));
 console.log(calculate(radius, cicumference));
 console.log(calculate(radius, diameter));

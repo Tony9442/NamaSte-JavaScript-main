@@ -14,3 +14,23 @@ function b(){
     var x = 100;
     console.log(x);
 }
+
+
+
+function d(){
+    const c = "hello world";
+    e();
+    function e(){
+        console.log(c);
+    }
+    
+}
+
+d();
+
+
+var u;
+let y;
+
+console.log(u);
+console.log(y);

@@ -3,7 +3,7 @@
 //The diffrence between Function Statement and Function Expression is hosting.
 
 
-//Anonymous functions are functions with no name and they are used in a where function are used as value example (function Expression).
+//Anonymous functions are functions with no name and they are used in a place where function are used as value example (function Expression).
 
 
 //Frist Class Function is just the ability to use functions as values.

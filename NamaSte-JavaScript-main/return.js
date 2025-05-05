@@ -92,3 +92,6 @@ function greetUser(user) {
 const user = getUserData(); // ✅ fetch data from one place...
 user.name = "zara"//incase we want change the name value.
 greetUser(user); // ...and pass it to another
+
+
+//appendValue adds the click button value to the display.

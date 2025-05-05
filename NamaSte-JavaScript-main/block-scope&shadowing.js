@@ -78,13 +78,59 @@
 
 
 //lexical scope works the same way in block also.
-const o = 70;
-{
-    const o = 9;
-    {
-        const o = 90;
-       console.log(o);
-    }
+// const o = 70;
+// {
+//     const o = 9;
+//     {
+//         const o = 90;
+//        console.log(o);
+//     }
     
-}
+// }
+
+// line 99 and line 103 are referring to the same memory space in the 
+// global scope and for that reason it modify the value of b in the global scope to 30.
+//  var b = 10;
+
+// {
+//         let e = 20;
+//         var b = 30;
+//         const v = 50;
+//         console.log(e);
+//         console.log(b);
+//         console.log(v);
+//     }
+
+//     console.log(b);
+
+//line 108 and line 112 points to a different scope which is the reason why they give different values 10 and 30.
+
+let b = 10;
+
+function x() {
+        let e = 20;
+        let b = 30;
+        const v = 50;
+        function y(){
+        console.log(e);
+        console.log(b);
+        console.log(v);
+        }
+        y();
+    }
+
+    x();
+    console.log(b);
+
+    const o = 70;
+    {
+        const o = 9;
+        {
+            const o = 90;
+            console.log(o);
+        }
+        console.log(o);
+        
+    }
+    console.log(o);
  
